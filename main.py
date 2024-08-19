@@ -9,7 +9,7 @@ load_dotenv()
 
 llm = ChatOpenAI(model = "gpt-3.5-turbo-0125")
 
-agent = create_csv_agent(llm, r"C:\Users\asus\Desktop\Python\Langchain LLM Atıl\RAGProject\cleaned_web_traffic_data (1).csv", verbose=True, allow_dangerous_code=True)
+agent = create_csv_agent(llm, r"cleaned_web_traffic_data (1).csv", verbose=True, allow_dangerous_code=True)
 
 def query_data(query):
     response = agent.invoke(query)
